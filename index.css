@@ -1,0 +1,48 @@
+body {
+  background-image: url('images\\Background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100%;
+  text-align: center;
+}a.button1
+{
+    
+    display:inline-block;
+    padding:0.35em 0.35em;
+    border:0.1em solid #f5e836;
+    margin:8em 0 0 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#050505;
+    text-align:center;
+    transition: all 0.2s;
+    block-size: 120px;
+    font-size: 60px;
+}
+a.button1:hover
+{
+    color:#b9fa07;
+    background-color:#f54848;
+}
+.glow {
+    font-size: 70px;
+    text-decoration: underline;
+    color: #ffffff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+} 
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                   0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+    }
+    to {
+      text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 
+                   0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}

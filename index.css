@@ -1,48 +1,168 @@
 body {
-  background-image: url('images\\Background.jpg');
+  background-image: url('images/pix.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: 100%;
+  text-align: center;  
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+}
+/*Proceed Button*/
+a.button1 {
+  display: inline-block;
+  padding: 0.35em 0.35em;
+  border: 0.1em solid #f5e836;
+  margin: 1em 0 0 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:"JetBrains+Mono";
+  font-weight: 500;
+  color:white;
   text-align: center;
-}a.button1
-{
-    
-    display:inline-block;
-    padding:0.35em 0.35em;
-    border:0.1em solid #f5e836;
-    margin:8em 0 0 0;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#050505;
-    text-align:center;
-    transition: all 0.2s;
-    block-size: 120px;
-    font-size: 60px;
+  visibility: hidden;
+  transition: all 0.2s;
+  block-size: 120px;
+  font-size: 60px;
+  animation: show;
+  animation-duration:100000s;
+  animation-delay: 9s;
 }
-a.button1:hover
-{
-    color:#b9fa07;
-    background-color:#f54848;
+@keyframes show {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
+
+a.button1:hover {
+  color: #b9fa07;
+  background-color: #f54848;
+}
+/*Our Featurs*/
 .glow {
-    font-size: 70px;
-    text-decoration: underline;
-    color: #ffffff;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-} 
+  font-size: 70px;
+  text-decoration: underline;
+  color: #ffffff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
-                   0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
-    }
-    to {
-      text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 
-                   0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
+  from {
+    text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+  }
+  to {
+    text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+#p1 {
+  white-space: nowrap;
+  overflow: hidden; 
+  margin-left: 8%;
+  margin-right: 8%;   
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(139, 255, 7);
+  animation: animated-text 4s steps(3000) 1s 1 normal both;
+}
+#p2 {
+  white-space: nowrap;
+  overflow: hidden; 
+  margin-left: 8%;
+  margin-right: 8%;   
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(139, 255, 7);
+  animation: animated-text 4s steps(3000) 1s 1 normal both;
+  animation-delay: 5s;
+}
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 83%;}
+}
+
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+
+
+.card {
+  position:relative;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  margin-left: 315px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(140, 22, 115, 0.2);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+  transform: translateX( 700px );
+  background-image: url('images/1.jpg');
+  
+  animation: opaqTransition 25s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+
+.card_part.card_part-two {
+  z-index: 7;
+  background-image: url('images/1_gray.png');
+  animation-delay: 5s;
+}
+
+.card_part.card_part-three {
+  z-index: 6;
+  background-image: url('images/1_blur.png');
+  animation-delay: 10s;
+}
+
+.card_part.card_part-four {
+  z-index: 5;
+  background-image: url('images/3.jpg');
+  animation-delay: 15s;
+}
+
+.card_part.card_part-five {
+  z-index: 8;
+  background-image: url('images/3_gray.jpg');
+  animation-delay: 20s;
+}
+
+@keyframes opaqTransition {
+  0% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  45% { transform: translateX( -700px ); }
+  100% { transform: translateX( -700px ); }
 }

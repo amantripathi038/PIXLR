@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="main.js"></script>
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=JetBrains+Mono">
+    <title>PIXLR Editor</title>
+</head>
+<body>
+    <canvas id="can1"></canvas>
+    <canvas id="can2"></canvas>
+    <br><section>
+    <input type = "file"  multiple = "false" accept = "image/*" id = "imgInput" onchange = "upload()">
+    <label for="imgInput" class="buttons">Select Image</label>
+    <input type = "button" id = "download" onclick = "download()">
+    <label for="download" class="buttons">Download Image</label>
+    <br><br><br>
+    <input type = "button" id = "doGray" onclick="doGray()">
+    <label for="doGray" class="buttons">Grayscale</label>
+    <input type = "button" id = "doBlur" onclick="doBlur()">
+    <label for="doBlur" class="buttons">Blur</label>
+</body>
+</html>

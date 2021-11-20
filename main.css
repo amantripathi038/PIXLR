@@ -9,8 +9,8 @@ body
   padding: 0.5%;
   border: 1px solid #10f708;
   border-width: 5px;
-  width: 600px;
-  height: 400px;
+  width: 580px;
+  height: 370px;
 }
 .buttons {
   display: inline-block;
@@ -19,6 +19,14 @@ body
   border-radius: 4px;
   background-color: #9c27b0;
   font-size: 24px;
+  color: #fff;
+}
+.buttons2 {
+  padding: 6px 10px; 
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #4027b0;
+  font-size: 14px;
   color: #fff;
 }
 input[type="file"] {
@@ -35,7 +43,9 @@ input[type="button"] {
   padding-top: 1%;
 }
 .slider {
+  display : none;
   -webkit-appearance: none;
+  margin-left: 25%;
   appearance: none;
   width: 50%;
   height: 15px;

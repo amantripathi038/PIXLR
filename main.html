@@ -19,10 +19,21 @@
     <label for="imgInput" class="buttons">Select Image</label>
     <input type = "button" id = "download" onclick = "download()">
     <label for="download" class="buttons">Download Image</label>
-    <br><br><br>
+    <br><br>
     <input type = "button" id = "doGray" onclick="doGray()">
     <label for="doGray" class="buttons">Grayscale</label>
     <input type = "button" id = "doBlur" onclick="doBlur()">
     <label for="doBlur" class="buttons">Blur</label>
+    <input type = "button" id = "doSepia" onclick="doSepia()">
+    <label for="doSepia" class="buttons">Sepia</label>
+    <input type = "button" id = "doBright" onclick="doBright()">
+    <label for="doBright" class="buttons">Brightness</label>
+    <div class="slidecontainer">
+    <input type="range" min="-255" max="255" value="0" class="slider" id="myRange">
+    <br>
+    <input type="button" id="Range" onclick="Bright()">
+    <label for="Range" class="buttons2" id="myRange2" style="display: none;">TryIt</label>
+    <p>Value: <span id="value"></span></p>
+    </div>
 </body>
 </html>
